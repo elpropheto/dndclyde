@@ -1,0 +1,132 @@
+body {
+    background: #113537;
+    color: #FFEAD0;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+main{
+    display:flex;
+    justify-content: center;
+    background: content-box radial-gradient(closest-side, #37505C, #113537);
+}
+
+h2 {
+    color: white;
+}
+#roll1, #roll2, #roll3{
+    border: 4px solid #37505C;
+    border-radius: 10%;
+    background: #96616B;
+    color: #FFEAD0;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    margin: 5px;
+    height:100px;
+    width: 180px;
+    transition-duration: 0.5s;
+}
+#roll1:hover, #roll2:hover, #roll3:hover{
+    background-color: #F76F8E;
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+    cursor:pointer;
+}
+#roll1:active, #roll2:active, #roll2:active {
+    transform: translateY(4px);
+}
+.dice{
+    height: 65px;
+    width: 100px;
+    background-color: transparent;
+    padding: 15px;
+}
+.dice1{
+    height: 80px;
+    width: 100px;
+}
+footer{
+    display: flex;
+    justify-content: center;
+    
+}
+.dice-slot, .faith-slot{
+    width: 100px;
+    height: 50px;
+    outline: black;
+    display: none;
+}
+#levels-from, #levels-to{
+background-color: #96616B;
+font-family: Georgia, 'Times New Roman', Times, serif;
+color: #FFEAD0;
+padding: 3px;
+transition-duration: 0.5s;
+border-radius: 5%;
+appearance: none;
+width: 75px;
+}
+#levels-from:hover, #levels-to:hover{
+    background-color: #F76F8E;
+    cursor:pointer;
+    border: 1px solid #37505C;
+}
+#generate{
+    border: 1px solid #FFEAD0;
+    background-color: #FFEAD0;
+    color: #113537;
+    height: 30px;
+    width: 80px;
+    border-radius: 8px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    transition-duration: 0.5s;
+}
+#generate:hover{
+    background-color: #37505C;
+    color: #FFEAD0;
+    cursor:pointer;
+}
+#generate:active{
+    transform: translateY(4px);
+}
+#test{
+    display:flex;
+    justify-content: space-between;
+}
+#mdr-poziom{
+    display: flex;
+    flex-direction: column-reverse;
+    
+}
+#act-of-faith, #modyfikator{
+    background-color: #96616B;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: #FFEAD0;
+    padding: 3px;
+    transition-duration: 0.5s;
+    height: 40px;
+    width: 200px;
+    text-align: right;
+    border-radius: 8px;
+    margin: 10px;
+    font-size: 16px;
+    appearance: none;
+    padding: 10px;
+    outline: none;
+    
+}
+#act-of-faith:hover, #modyfikator:hover{
+    background-color: #F76F8E;
+    cursor:pointer;
+    border: 1px solid #37505C;
+}
+#result {
+    font-size: 16px;
+    line-height: 1.5;
+    margin: 10px 0 10px 0;
+    background-color: #37505C;
+    outline-style: outset;
+    outline-color: #96616B;
+  }
+  
+  #result strong {
+    font-weight: bold;
+    color: #F76F8E;
+  }
+
