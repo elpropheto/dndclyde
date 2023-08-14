@@ -127,7 +127,7 @@ function getRandomSpellFromLevel(levelSpells) {
   return levelSpells[randomIndex];
 }
 
-fetch('spells.json')
+fetch('spellsbase.json')
   .then(response => response.json())
   .then(data => {
     spell_data = data;
@@ -159,9 +159,9 @@ fetch('spells.json')
     const randomSpellName = getRandomSpellFromLevel(spellsToChooseFrom);
     const randomSpell = spell_data[randomSpellName];
     const spellDetails = `
-    <strong>Nazwa:</strong> ${randomSpellName}<br>
+    <strong>Nazwa:</strong> ${randomSpell.name}<br>
     <strong>Casting Time:</strong> ${randomSpell.casting_time}<br>
-    <strong>Components:</strong> ${randomSpell.components}<br>
+    <strong>Components:</strong> ${randomSpell.components.raw}<br>
     <strong>Description:</strong> ${randomSpell.description}<br>
     <strong>Duration:</strong> ${randomSpell.duration}<br>
     <strong>Level:</strong> ${randomSpell.level}<br>
