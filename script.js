@@ -137,6 +137,7 @@ fetch('spells.json')
 
     generate.addEventListener('click', function(){
 
+
     const LevelsFromRoll = document.getElementById('levels-from');
     const LevelsToRoll = document.getElementById('levels-to');
     const LevelsFrom1 = LevelsFromRoll.value;
@@ -168,6 +169,7 @@ fetch('spells.json')
   `;
   
   const resultDiv = document.getElementById('result');
+  resultDiv.style.display = 'inline-block';
   resultDiv.innerHTML = spellDetails;
   
     })
