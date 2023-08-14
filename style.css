@@ -3,6 +3,7 @@ body {
     color: #FFEAD0;
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
+
 main{
     display:flex;
     justify-content: center;
@@ -12,18 +13,17 @@ main{
 h2 {
     color: white;
 }
+
 #roll1, #roll2, #roll3 {
     border: 4px solid #37505C;
     border-radius: 10%;
     background: #96616B;
     color: #FFEAD0;
-    font-family: Georgia, 'Times New Roman', Times, serif;
     margin: 5px;
     height:100px;
     width: 180px;
     transition-duration: 0.2s;
 }
-
 
 #roll1:hover, #roll2:hover, #roll3:hover{
     background-color: #F76F8E;
@@ -33,15 +33,18 @@ h2 {
 #roll1:active, #roll2:active, #roll3:active {
     transform: translateY(4px);
 }
+
 .dice{
     height: 65px;
     width: 100px;
     padding: 15px;
 }
+
 .dice1{
     height: 80px;
     width: 100px;
 }
+
 @media (max-width: 900px){
     #roll1, #roll2, #roll3{
         width: 150px;
@@ -49,6 +52,7 @@ h2 {
         margin-top: 40px;
         position: relative;
     } 
+
     .dice {
         height: 50px;
         width: 90px;
@@ -60,6 +64,7 @@ h2 {
         transform: translate(-50%, -50%);
         
     }
+
     .dice1 {
         height: 60px;
         width: 60px;
@@ -71,20 +76,21 @@ h2 {
         transform: translate(-50%, -50%);
     }
 }
+
 footer{
     display: flex;
     justify-content: center;
-    
 }
+
 .dice-slot, .faith-slot{
     width: 100px;
     height: 50px;
-    outline: black;
     display: none;
 }
+
 #levels-from, #levels-to{
 background-color: #96616B;
-font-family: Georgia, 'Times New Roman', Times, serif;
+font-family: inherit;
 color: #FFEAD0;
 transition-duration: 0.5s;
 border-radius: 5%;
@@ -94,11 +100,13 @@ height: 35px;
 text-align: center;
 font-size: 16px;
 }
+
 #levels-from:hover, #levels-to:hover{
     background-color: #F76F8E;
     cursor:pointer;
     border: 1px solid #37505C;
 }
+
 #generate{
     border: 1px solid #FFEAD0;
     background-color: #FFEAD0;
@@ -106,27 +114,29 @@ font-size: 16px;
     height: 35px;
     width: 100px;
     border-radius: 8px;
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-family: inherit;
     transition-duration: 0.1s;
     margin-left: 25px;
-    margin-bottom: 0;
     font-size: 18px;
     text-align: center;
-    position:absolute;
-    
+    position: absolute; 
 }
+
 #generate:hover{
     background-color: #37505C;
     color: #FFEAD0;
     cursor:pointer;
 }
+
 #generate:active{
     transform: translateY(4px);
 }
+
 #test{
     display:flex;
     justify-content: space-between;
 }
+
 #mdr-poziom{
     display: flex;
     flex-direction: column-reverse;
@@ -134,7 +144,7 @@ font-size: 16px;
 }
 #act-of-faith, #modyfikator{
     background-color: #96616B;
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-family: inherit;
     color: #FFEAD0;
     padding: 3px;
     transition-duration: 0.5s;
@@ -146,14 +156,15 @@ font-size: 16px;
     font-size: 16px;
     appearance: none;
     padding: 10px;
-    outline: none;
-    
+    outline: none;  
 }
+
 #act-of-faith:hover, #modyfikator:hover{
     background-color: #F76F8E;
     cursor:pointer;
     border: 1px solid #37505C;
 }
+
 #result {
     font-size: 16px;
     line-height: 1.5;

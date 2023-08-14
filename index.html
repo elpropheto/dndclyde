@@ -17,32 +17,32 @@
       <h2>Magiczna Kość</h2>
       <p>Do wykorzystania:</p>
       <div id = "diceContainer">
-      <img class = "dice-slot" src="./img/dice.png">
-      <img class = "dice-slot" src="./img/dice.png">
-      <img class = "dice-slot" src="./img/dice.png">
-      <img class = "dice-slot" src="./img/dice.png">
-      <img class = "dice-slot" src="./img/dice.png">
+        <img class = "dice-slot" src="./img/dice.png">
+        <img class = "dice-slot" src="./img/dice.png">
+        <img class = "dice-slot" src="./img/dice.png">
+        <img class = "dice-slot" src="./img/dice.png">
+        <img class = "dice-slot" src="./img/dice.png">
+      </div>
+      </div>
+      <div id = "mdr-poziom">
+        <select id="act-of-faith">
+          <option value="0">Ilośc Aktów Wiary</option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+        </select>
+        <select id="modyfikator">
+          <option value="0">Modyfikator z Mdr.</option>
+          <option value="1">+1</option>
+          <option value="2">+2</option>
+          <option value="3">+3</option>
+          <option value="4">+4</option>
+          <option value="5">+5</option>
+        </select>
+      </div>
     </div>
-    </div>
-    <div id = "mdr-poziom">
-      <select id="act-of-faith">
-        <option value="0">Ilośc Aktów Wiary</option>
-        <option value="1">1</option>
-        <option value="2">2</option>
-        <option value="3">3</option>
-      </select>
-      <select id="modyfikator">
-        <option value="0">Modyfikator z Mdr.</option>
-        <option value="1">+1</option>
-        <option value="2">+2</option>
-        <option value="3">+3</option>
-        <option value="4">+4</option>
-        <option value="5">+5</option>
-      </select>
-    </div>
-  </div>
     <div id = "block2">
-    <h2>Akt Wiary</h2>
+      <h2>Akt Wiary</h2>
       <p>Do wykorzystania:</p>
       <div id="faithContainer">
         <img class = "faith-slot" src="./img/faith.png">
@@ -51,61 +51,61 @@
       </div>
     </div>
     <div id = "block3">
-    <h2>Losowe zaklęcie</h2>
-    <div id = 'randomspell'>
-    <div class = 'list'>
-      <p>Od:</p>
-      <select id="levels-from">
-        <option value="0">All</option>
-        <option value="0">Cantrip</option>
-        <option value="1">1st</option>
-        <option value="2">2nd</option>
-        <option value="3">3rd</option>
-        <option value="4">4th</option>
-        <option value="5">5th</option>
-        <option value="6">6th</option>
-        <option value="7">7th</option>
-        <option value="8">8th</option>
-        <option value="9">9th</option>
-      </select>
-      <p>Do:</p>
-      <select id="levels-to">
-        <option value="9">All</option>
-        <option value="0">Cantrip</option>
-        <option value="1">1st</option>
-        <option value="2">2nd</option>
-        <option value="3">3rd</option>
-        <option value="4">4th</option>
-        <option value="5">5th</option>
-        <option value="6">6th</option>
-        <option value="7">7th</option>
-        <option value="8">8th</option>
-        <option value="9">9th</option>
-      </select>
-      <button id = "generate" type="button"><strong>Generate</strong></button>
+      <h2>Losowe zaklęcie</h2>
+      <div id = 'randomspell'>
+        <div class = 'list'>
+          <p>Od:</p>
+          <select id="levels-from">
+            <option value="0">All</option>
+            <option value="0">Cantrip</option>
+            <option value="1">1st</option>
+            <option value="2">2nd</option>
+            <option value="3">3rd</option>
+            <option value="4">4th</option>
+            <option value="5">5th</option>
+            <option value="6">6th</option>
+            <option value="7">7th</option>
+            <option value="8">8th</option>
+            <option value="9">9th</option>
+          </select>
+          <p>Do:</p>
+          <select id="levels-to">
+            <option value="9">All</option>
+            <option value="0">Cantrip</option>
+            <option value="1">1st</option>
+            <option value="2">2nd</option>
+            <option value="3">3rd</option>
+            <option value="4">4th</option>
+            <option value="5">5th</option>
+            <option value="6">6th</option>
+            <option value="7">7th</option>
+            <option value="8">8th</option>
+            <option value="9">9th</option>
+          </select>
+          <button id = "generate" type="button"><strong>Generate</strong></button>
+        </div>
+        <div id="result">
+          <p id="spellName"></p>
+          <p id="castingTime"></p>
+          <p id="components"></p>
+          <p id="description"></p>
+          <p id="duration"></p>
+          <p id="level"></p>
+          <p id="range"></p>
+        </div>
+      </div>
     </div>
-    <div id="result">
-      <p id="spellName"></p>
-      <p id="castingTime"></p>
-      <p id="components"></p>
-      <p id="description"></p>
-      <p id="duration"></p>
-      <p id="level"></p>
-      <p id="range"></p>
-    </div>
-  </div>
-    </div>
-      <footer>
-        <button id = "roll1">
-          <img  class = "dice" src="./img/dice.png">
-        </button>
-        <button id = "roll2">
-          <img  class = "dice" src="./img/faith.png">
-        </button>
-        <button id = "roll3">
-          <img  class = "dice1" src="./img/rest.png">
-        </button>
-      </footer>
+    <footer>
+      <button id = "roll1">
+        <img  class = "dice" src="./img/dice.png">
+      </button>
+      <button id = "roll2">
+        <img  class = "dice" src="./img/faith.png">
+      </button>
+      <button id = "roll3">
+        <img  class = "dice1" src="./img/rest.png">
+      </button>
+    </footer>
     
     <!-- kolorki
     ciemny: #113537
