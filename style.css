@@ -168,11 +168,12 @@ font-size: 16px;
 #result {
     font-size: 16px;
     line-height: 1.5;
-    margin-top: 15px;
+    margin: 25px 2px 25px 2px;
     background-color: #37505C;
     outline-style: outset;
     outline-color: #96616B;
     display:none;
+    padding: 10px;
   }
   
   #result strong {

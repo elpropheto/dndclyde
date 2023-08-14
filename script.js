@@ -1,13 +1,12 @@
 
 document.addEventListener('DOMContentLoaded', () => {
-    const roll1 = document.getElementById('roll1');
-    const roll2 = document.getElementById("roll2");
-    const roll3 = document.getElementById("roll3");
+  const roll1 = document.getElementById('roll1');
+  const roll2 = document.getElementById("roll2");
+  const roll3 = document.getElementById("roll3");
 
-    
-    roll1.addEventListener('click', function(){
-      const dicesToHide = document.querySelectorAll('#diceContainer img.dice-slot');
-      let LastVisibleDiceIndex = -1;
+  roll1.addEventListener('click', function(){
+    const dicesToHide = document.querySelectorAll('#diceContainer img.dice-slot');
+    let LastVisibleDiceIndex = -1;
       for (let i = 0; i < dicesToHide.length; i++){
         if (dicesToHide[i].style.display !== 'none'){
           LastVisibleDiceIndex = i;
@@ -17,11 +16,11 @@ document.addEventListener('DOMContentLoaded', () => {
           break;
         };
       };
-    });
+  });
 
-    roll2.addEventListener('click', function(){
-      const faithToHide = document.querySelectorAll('#faithContainer img.faith-slot');
-      let LastVisibleFaithIndex = -1;
+  roll2.addEventListener('click', function(){
+    const faithToHide = document.querySelectorAll('#faithContainer img.faith-slot');
+    let LastVisibleFaithIndex = -1;
       for (let i = 0; i < faithToHide.length; i++){
         if (faithToHide[i].style.display !== 'none'){
           LastVisibleFaithIndex = i;
@@ -40,12 +39,14 @@ document.addEventListener('DOMContentLoaded', () => {
        const FaithIndex = document.getElementById("act-of-faith");
        let AvailableDiceIndex = parseInt(DiceIndex.value);
        let AvailableFaithIndex = parseInt(FaithIndex.value);
-       usedDice.forEach((image) =>{
+       
+       usedDice.forEach(() =>{
         for (let i = 0; i < AvailableDiceIndex; i++){
           usedDice[i].style.display = 'inline-block';
         };
        });
-       usedFaith.forEach((image) =>{
+
+       usedFaith.forEach(() =>{
         for (let i = 0; i < AvailableFaithIndex; i++){
           usedFaith[i].style.display = 'inline-block';
         };
@@ -57,21 +58,22 @@ document.addEventListener('DOMContentLoaded', () => {
   const diceImg = document.querySelectorAll("#diceContainer img.dice-slot");
 
   diceSelector.addEventListener("change", function () {
-  const selectedValue = parseInt(diceSelector.value);
+    const selectedValue = parseInt(diceSelector.value);
 
-  diceImg.forEach((image, index) => {
-    if (index < selectedValue) {
-      image.style.display = "inline-block";
-    } else {
-      image.style.display = "none";
-    }
+    diceImg.forEach((image, index) => {
+      if (index < selectedValue) {
+        image.style.display = "inline-block";
+      } 
+      else {
+        image.style.display = "none";
+      }
   });
 });
 
 const faithSelector = document.getElementById("act-of-faith");
-  const faithImg = document.querySelectorAll("#faithContainer img.faith-slot");
+const faithImg = document.querySelectorAll("#faithContainer img.faith-slot");
 
-  faithSelector.addEventListener("change", function () {
+faithSelector.addEventListener("change", function () {
   const selectedValue = parseInt(faithSelector.value);
 
   faithImg.forEach((image, index) => {
@@ -82,6 +84,7 @@ const faithSelector = document.getElementById("act-of-faith");
     }
   });
 });
+
 // Spell Generator
 
 var by_level = {
@@ -105,8 +108,8 @@ function organizeSpellsByLevel(spell_data) {
 
   for (var spellName in spell_data) {
     if (spell_data.hasOwnProperty(spellName)) {
-      var spell = spell_data[spellName];
 
+      var spell = spell_data[spellName];
       by_level["All"].push(spellName);
 
       if (spell.level) {
@@ -137,25 +140,20 @@ fetch('spellsbase.json')
 
     generate.addEventListener('click', function(){
 
-
-    const LevelsFromRoll = document.getElementById('levels-from');
-    const LevelsToRoll = document.getElementById('levels-to');
-    const LevelsFrom1 = LevelsFromRoll.value;
-    const LevelsTo1 = LevelsToRoll.value;
-    const LevelsFrom = parseInt(LevelsFrom1);
-    const LevelsTo = parseInt(LevelsTo1);
-
-    console.log(Number.isInteger(LevelsTo));
-    console.log(LevelsFrom);
-    console.log(LevelsTo);
+      const LevelsFromRoll = document.getElementById('levels-from');
+      const LevelsToRoll = document.getElementById('levels-to');
+      const LevelsFrom1 = LevelsFromRoll.value;
+      const LevelsTo1 = LevelsToRoll.value;
+      const LevelsFrom = parseInt(LevelsFrom1);
+      const LevelsTo = parseInt(LevelsTo1);
     
-    let spellsToChooseFrom = [];
+      let spellsToChooseFrom = [];
     
-    for (let level = LevelsFrom; level <= LevelsTo; level++){
-      if (organizedSpells[level]){
-        spellsToChooseFrom = spellsToChooseFrom.concat(organizedSpells[level]);
+      for (let level = LevelsFrom; level <= LevelsTo; level++){
+        if (organizedSpells[level]){
+          spellsToChooseFrom = spellsToChooseFrom.concat(organizedSpells[level]);
+        }
       }
-    }
     const randomSpellName = getRandomSpellFromLevel(spellsToChooseFrom);
     const randomSpell = spell_data[randomSpellName];
     const spellDetails = `
@@ -168,9 +166,9 @@ fetch('spellsbase.json')
     <strong>Range:</strong> ${randomSpell.range}
   `;
   
-  const resultDiv = document.getElementById('result');
-  resultDiv.style.display = 'inline-block';
-  resultDiv.innerHTML = spellDetails;
+    const resultDiv = document.getElementById('result');
+    resultDiv.style.display = 'inline-block';
+    resultDiv.innerHTML = spellDetails;
   
     })
   })
